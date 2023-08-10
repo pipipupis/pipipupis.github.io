@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html>
-<!DOCTYPE html>
-<html>
 <head>
-    <title>Carta Formal</title>
+    <title>Señora B</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
         body {
@@ -16,8 +14,43 @@
             align-items: center;
             min-height: 100vh;
         }
-        
+
+        .formulario {
+            background-color: #FBEFF8;
+            padding: 20px;
+            border: 2px solid #8C0327;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 90%;
+            text-align: center;
+            display: block;
+        }
+
+        input[type="password"] {
+            width: 95%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #8C0327;
+            border-radius: 5px;
+            align-items: center;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #8C0327;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #6B0220;
+        }
+
+        /* Estilos para la carta formal */
         .carta {
+            display: none;
             background-color: #FBEFF8;
             padding: 20px;
             border: 2px solid #8C0327;
@@ -49,11 +82,18 @@
     </style>
 </head>
 <body>
-    <div class="carta">
+    <div class="formulario" id="formulario">
+        <form id="passwordForm">
+            <h1>Contraseña</h1>
+            <input type="password" id="password" placeholder="Contraseña" required>
+            <button type="submit">Ingresar</button>
+        </form>
+    </div>
+
+    <div class="carta" id="cartaContainer" style="display: none;">
         <h1>Estimada Señora Betsabe...</h1>
-        
         <!-- ... el resto del contenido de la carta ... -->
-      
+
         <p>Espero que este mensaje te encuentre en el mejor estado de ánimo y bienestar. Antes que nada, quiero hacer una pausa para expresar mis más sinceras disculpas una vez más. Reconozco plenamente que no poseo la misma destreza y habilidad que te distinguen, y esta limitación se hace evidente en mi capacidad para realizar ciertas tareas y que mi habilidad no se compara a la tuya y lamento no estar a la altura en ese aspecto.</p>
         
         <p>Sin embargo, quiero subrayar que dispongo del tiempo necesario para emprender esta tarea y llevar a cabo este proyecto con dedicación y esmero.</p>
@@ -96,6 +136,28 @@
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠳⣍⣉⣻⣏⣉⣡⠞⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<br>
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</center></p>
 
+        </div>
+
     </div>
+
+    <script>
+        const passwordForm = document.getElementById("passwordForm");
+        const formulario = document.getElementById("formulario");
+        const cartaContainer = document.getElementById("cartaContainer");
+        const passwordInput = document.getElementById("password");
+
+        passwordForm.addEventListener("submit", function(event) {
+            event.preventDefault();
+            const password = "sapa";
+            const enteredPassword = passwordInput.value;
+
+            if (enteredPassword === password) {
+                formulario.style.display = "none";
+                cartaContainer.style.display = "block";
+            } else {
+                alert("Incorrecto");
+            }
+        });
+    </script>
 </body>
-</html>    
+</html>	
