@@ -18,19 +18,22 @@
         .formulario {
             background-color: #FBEFF8;
             padding: 20px;
-            border: 2px solid #8C0327;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             max-width: 90%;
             text-align: center;
             display: block;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); /* Sombra */
         }
 
         input[type="password"] {
-            width: 95%;
+            width: 90%;
             padding: 10px;
             margin-bottom: 10px;
-            border: 1px solid #8C0327;
+            border: 1px solid #FBEFF8;
+            outline-color: #8C0327;
+            color: #8C0327;
+            background-color: #F8E0F1;
             border-radius: 5px;
             align-items: center;
         }
@@ -38,7 +41,7 @@
         button {
             padding: 10px 20px;
             background-color: #8C0327;
-            color: #ffffff;
+            color: #FBEFF8;
             border: none;
             border-radius: 5px;
             cursor: pointer;
@@ -50,14 +53,14 @@
 
         /* Estilos para la carta formal */
         .carta {
-            display: none;
             background-color: #FBEFF8;
             padding: 20px;
-            border: 2px solid #8C0327;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             max-width: 90%;
-            margin: 0 auto;
+            text-align: left;
+            display: block;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); /* Sombra */
         }
         
         h1 {
@@ -65,6 +68,7 @@
             font-size: 24px;
             margin-bottom: 10px;
             color: #8C0327;
+            height: 40px;
         }
         
         p {
@@ -76,6 +80,7 @@
         .firma {
             font-style: italic;
             font-size: 14px;
+            font-color: #6B0220
             text-align: right;
             margin-top: 20px;
         }
@@ -155,7 +160,7 @@
                 formulario.style.display = "none";
                 cartaContainer.style.display = "block";
             } else {
-                alert("Incorrecto");
+                alert("Esa no es inchi sapa");
             }
         });
     </script>
