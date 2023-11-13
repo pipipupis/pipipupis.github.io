@@ -1,100 +1,183 @@
 <!DOCTYPE html>
-<html lang="es">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Saludo, Despedida y Texto</title>
+    <title>Señora B</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
         body {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            margin: 0;
+            font-family: Arial, sans-serif;
             background-color: #F8E0F1;
-            font-family: 'Arial', sans-serif;
-        }
-
-        .contenedor {
+            margin: 0;
+            padding: 0;
             display: flex;
-            justify-content: space-between;
-            width: 80%; /* Ajusta el ancho según tus preferencias */
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
         }
 
-        .cuadro {
-            flex: 1;
-            padding: 40px;
-            border: 0px solid #8C0327;
-            border-radius: 10px;
+        .formulario {
             background-color: #FBEFF8;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 90%;
             text-align: center;
-            margin: 10px; /* Añade un margen entre los cuadros */
+            display: block;
+
         }
 
-        h1 {
-            color: #8C0327;
+        input[type="password"] {
+            width: 90%;
+            padding: 10px;
             margin-bottom: 10px;
+            border: 1px solid #FBEFF8;
+            outline-color: #8C0327;
+            color: #8C0327;
+            background-color: #F8E0F1;
+            border-radius: 5px;
+            align-items: center;
         }
 
-        p {
+        button {
+            padding: 10px 20px;
+            background-color: #8C0327;
+            color: #FBEFF8;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #6B0220;
+        }
+
+        /* Estilos para la carta formal */
+        .carta {
+            background-color: #FBEFF8;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 90%;
+            text-align: left;
+            display: block;
+        }
+        
+        h1 {
+            font: italic;
+            font-size: 24px;
+            margin-bottom: 10px;
             color: #8C0327;
-            font-size: 18px;
+            height: 40px;
+        }
+        
+        p {
+            font-size: 16px;
+            line-height: 1.5;
+            color: #8C0327;
+        }
+        
+        .firma {
+            font-style: italic;
+            font-size: 14px;
+            font-color: #6B0220
+            text-align: right;
+            margin-top: 20px;
+        }
+
+        .gracias {
+            font-style: italic;
+            font-size: 14px;
+            font-color: #8C0327
+            text-align: center;
+            margin-top: 20px;
+        }
+        .kitty {
+            font-size: 2;
+            line-height: 1;
+            text-align: center;
+            color: #8C0327;
         }
     </style>
 </head>
 <body>
-    <div class="contenedor">
-        <div class="cuadro">
-        <p>⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⡾⠛⠛⠳⢦⣄⡀⢀⣀⣀⣀⣠⣤⣤⣄⣀⣀⡀⠀⢀⣤⣶⣦⣤⣶⠛⠛⢷⡄⠀⠀⠀⠀⠀⠀<br>
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⡟⠀⠀⠀⠀⠀⠈⠛⢯⣍⠁⠀⠀⠀⠀⠀⠀⠉⠉⣻⣿⡿⣯⣟⡿⣿⣦⠀⠀⠹⣆⠀⠀⠀⠀⠀<br>
-⠀⠀⠀⠀⠀⠀⠀⠀⢀⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠻⢧⠀⠀⠀⠀⠀⠀⠀⢸⣿⣟⡿⣧⣟⣿⣻⣿⣤⣀⡀⢻⡄⠀⠀⠀⠀<br>
-⠀⠀⠀⠀⠀⠀⠀⣴⢾⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣯⢿⣽⣿⣿⣿⣟⡿⣿⢿⣿⣿⣷⡀⠀⠀<br>
-⠀⠀⠀⠀⠀⣠⡞⠁⢸⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸⣿⣽⢯⣿⣿⣿⢷⣯⢿⣽⣻⣿⣿⣿⡇⠀⠀<br>
-⠀⠀⠀⠀⣰⠏⠀⠀⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠻⣿⣟⣾⣻⣿⣿⣾⣯⣷⣿⣿⣿⣿⡇⠀⠀<br>
-⠀⠀⠀⢰⡏⠀⠀⠀⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠙⠛⠛⠁⠈⠉⠛⢿⣿⣽⣷⡿⠁⠀⠀<br>
-⠀⠀⠀⡿⠀⠀⠀⠀⠉⠀⠀⠀⠀⠀⠀⠀⢀⣴⠞⠛⠉⠛⢦⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⠛⣿⡀⠀⠀⠀<br>
-⠀⠀⢸⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣰⡟⠁⠀⠀⠀⠀⠸⣧⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⡇⠀⠀⠀<br>
-⠘⠒⢿⠷⠶⠤⣤⣀⣀⡀⠀⠀⠀⠀⠀⠋⠀⠀⠀⠀⠀⠀⠀⢻⡄⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣤⡤⢾⡗⠒⠒⠂<br>
-⠀⠀⢸⡆⠀⠀⠀⠈⠩⣏⡛⠲⠆⠀⠀⠀⠀⠀⠀⢀⣦⣄⠀⠈⣷⣿⡄⠀⠀⠀⠀⠀⠀⣿⠀⢀⣠⡶⠀⠁⠀⣼⠇⠀⠀⠀<br>
-⠀⠀⠈⣧⠀⠀⠀⠀⠀⠙⢿⣄⠀⠀⠀⠀⠀⠀⢰⣿⣿⣿⡆⠀⠘⠛⠀⠀⠀⠀⠀⠀⠀⠹⣿⣿⣿⠃⠀⠚⢛⡟⠛⠒⠀⠀<br>
-⠀⠀⠀⢹⣆⣀⣤⡤⠶⠞⠛⠻⣷⣄⠀⠀⠀⠀⢸⣿⣿⣿⡟⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠹⣿⡟⠀⢀⣀⣼⡁⠀⠀⠀⠀<br>
-⠀⢠⡴⠞⠻⣍⠀⠀⠀⠀⠀⠀⣹⣿⣧⡀⠀⠀⠀⢿⣿⡿⠃⠀⠀⠀⠀⠀⢠⣴⡶⣤⠀⠀⠀⠀⠀⠀⢠⣾⠿⠿⠷⣦⡀⠀<br>
-⠀⠀⠀⠀⠀⠹⣷⠀⠀⠀⣀⡾⠁⠈⢿⣿⣆⠀⠀⠀⠈⠀⠀⠀⠀⠀⠀⠀⠸⣿⡿⠿⠀⠀⠀⠀⢀⣰⡿⠀⠀⠀⠀⠈⢿⠀<br>
-⠀⠀⠀⠀⠀⠀⠘⢳⣤⡾⠋⠀⠀⠀⠈⠻⣿⣷⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⣀⣤⣴⣾⣿⣿⠇⠀⠀⠀⠀⠀⠈⡇<br>
-⠀⠀⠀⠀⠀⠀⢀⡾⠋⠛⠶⣄⡀⠀⠀⠀⠘⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠀⠀⠀⠀⠀⠀⢀⡇<br>
-⠀⠀⠀⠀⠀⠰⠟⠁⠀⠀⠀⠈⠉⣳⡶⢦⣤⣼⣿⣿⣿⣿⣿⣿⣿⣏⣾⣿⣿⣿⣿⣿⢻⣿⣿⣿⡟⠁⠀⠀⠀⠀⠀⠀⣸⠀<br>
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡾⠋⠀⠀⠀⣿⣿⣿⣿⣿⣿⣿⣳⣿⣿⣿⣿⣿⣿⢣⡟⣼⣛⣿⡀⠀⠀⠀⠀⠀⠀⣰⠃⠀<br>
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣰⠟⠁⠀⠀⠀⢸⣟⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⣟⡼⣓⢾⡱⢮⡽⣷⣄⣀⡀⣀⣤⠞⠁⠀⠀<br>
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⣰⣯⣤⣄⣀⣀⠀⢸⣟⡞⡼⣭⣛⠿⣹⢻⠽⣭⢳⡹⢶⣙⢮⡳⣝⣣⢞⣽⠏⠉⠉⠉⠀⠀⠀⠀⠀<br>
-⠀⠀⠀⠀⠀⠀⠀⠀⢠⡟⠀⠀⠀⠉⠉⠛⠻⣿⣜⡳⢧⣝⣫⢗⣫⡝⣮⢳⡝⣣⢏⡾⣱⢧⣋⢾⡿⠀⠀⠀⠀⠀⠀⠀⠀⠀<br>
-⠀⠀⠀⠀⠀⠀⠀⠀⣿⠀⠀⠀⠀⠀⠀⠀⠀⠈⣿⣝⡳⣎⡳⣎⢧⡻⡜⣧⡛⣵⢫⢞⡵⢮⣝⣾⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀<br>
-⠀⠀⠀⠀⠀⠀⠀⠀⢻⡄⠀⠀⠀⠀⠀⢀⣤⣶⠿⣎⡵⣫⢵⢫⣞⣱⢻⡴⣛⡼⣹⢞⡼⣳⣾⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<br>
-⠀⠀⠀⠀⠀⠀⠀⠀⠈⠻⣄⡀⠀⣀⣤⡿⣏⣗⢻⣬⢳⡝⣮⢳⢎⣧⢳⡝⡮⣵⢣⣿⣿⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<br>
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉⠉⠹⣿⡵⢫⣜⡳⣎⠷⣹⠖⣯⢺⣬⢳⣾⣵⣿⣿⣿⠟⠋⣽⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<br>
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢹⣿⢣⡏⣷⡎⡟⣥⢻⡜⣷⣿⣿⣿⢹⡏⠁⠀⣴⣾⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<br>
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⢻⣮⣝⣶⣭⢳⡝⣎⣷⣧⣷⢾⡏⠀⠙⠛⠋⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<br>
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠻⣍⠉⠙⠛⠙⠉⠉⠁⢀⡾⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<br>
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠛⠲⠶⠶⠖⠖⠚⠋⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</p>
-        </div>
-        <div class="cuadro">
-            <p>⠀</p>
-            <p>⠀</p>
-            <p>⠀</p>
-            <p>⠀</p>
-            <p>⠀</p>
-            <p>⠀</p>
-            <p>⠀</p>
-            <h1>Traduce Esto</h1>
-            <p>01000010 01110101 01110011 01100011 01100001 00100000 01100101 01101110 00100000 01101100 01100001 01110011 00100000 01100110 01101100 01101111 01110010 01100101 01110011</p>
-            <p>⠀</p>
-            <p>⠀</p>
-            <p>⠀</p>
-            <p>⠀</p>
-            <p>⠀</p>
-            <p>⠀</p>
-            <p>⠀</p>
-        </div>
+    <div class="formulario" id="formulario">
+        <form id="passwordForm">
+            <h1>Contraseña</h1>
+            <input type="password" id="password" placeholder="Contraseña" required>
+            <button type="submit">Ingresar</button>
+        </form>
     </div>
+
+    <div class="carta" id="cartaContainer" style="display: none;">
+        <h1>Estimada Señora Betsabe...</h1>
+        <!-- ... el resto del contenido de la carta ... -->
+
+        <p>Espero que este mensaje te encuentre en el mejor estado de ánimo y bienestar. Antes que nada, quiero hacer una pausa para expresar mis más sinceras disculpas una vez más. Reconozco plenamente que no poseo la misma destreza y habilidad que te distinguen, y esta limitación se hace evidente en mi capacidad para realizar ciertas tareas y que mi habilidad no se compara a la tuya y lamento no estar a la altura en ese aspecto.</p>
+        
+        <p>Sin embargo, quiero subrayar que dispongo del tiempo necesario para emprender esta tarea y llevar a cabo este proyecto con dedicación y esmero.</p>
+        
+        <p>Si por alguna razón mi esfuerzo no se ajusta a tus expectativas, te pido disculpas y te agradezco de antemano por tu paciencia y comprensión. En cuanto al afecto que nos une, quiero expresarte que te tengo un amor profundo y sincero. Anhelo que puedas percibir la genuina intención detrás de mis acciones, incluso si a veces estas resultan imperfectas.</p>
+        
+        <p>En lo referente a los Theobroma cacaos, me permito sugerir con humildad que disfrutarlos gradualmente puede añadir un toque especial a su placer, evitando así la indulgencia excesiva y permitiéndote saborearlos en diferentes momentos.</p>
+        
+        <p>Reconozco plenamente la dificultad que puede representar descifrar estos mensajes y el hecho de haber optado por presentarlos en formato físico. Lamento cualquier molestia que esto pueda haber ocasionado ante este texto, y te agradezco por tu dedicación y paciencia al explorar este enigma.</p>
+
+        <p>La elaboración de esta sorpresa involucró un gran despliegue de tiempo, esfuerzo y hasta cierto nivel de frustración. Mi deseo es que puedas valorar este gesto en su totalidad, comprendiendo la dedicación que he invertido en su realización.</p>
+
+        <p>No puedo dejar de enfatizar la profundidad de mi afecto por ti, y aunque estoy consciente de que las acciones tienen un peso único y a menudo mayor que las palabras, siento la necesidad de reiterarte cuánto te amo y aprecio.</p>
+
+        <p>Te agradezco por brindarle atención a mis palabras y nuevamente extiendo mis disculpas por cualquier inconveniente que haya surgido previamente. Mi deseo es que este mensaje te llegue con todo mi cariño y gratitud, reafirmando el amor que siento por ti.</p>
+
+        <p><font size=.001><font color="#FBEFF8">f</p>  
+        
+        <p class="firma">En un tono más ligero y distendido, permíteme finalizar con una solicitud que puede parecer extravagante: ¿Sería factible considerar la posibilidad de adquirir un estupefaciente de naturaleza ilícita con propiedades estimulantes? Esta inquietud es presentada con una dosis de humor y sin expectativas rígidas, solo como un pensamiento juguetón.</p>
+
+        <p class="gracias">-Le agradezco sinceramente.</p>
+
+        <p><font size=.5><font color="#FBEFF8">f</p>  
+
+        <p class="kitty"><font size=2><font color="#8C0327">⠀⠀⠀⠀⠀⠀⠀⢀⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀    ⠀⠀ ⣀⣤⣤⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<br>
+⠀⠀⠀⠀⠀⡀⣰⡿⠛⠛⠿⢶⣦⣀⠀⢀⣀⣀⣀⣀⣠⡾⠋⠀⠀⠹⣷⣄⣤⣶⡶⠿⠿⣷⡄⠀⠀⠀⠀⠀<br>
+⠀⠀⠀⠀⠀⢰⣿⠁⠀⠀⠀⠀⠈⠙⠛⠛⠋⠉⠉⢹⡟⠁⠀⠀⣀⣀⠘⣿⠉⠀⠀⠀⠀⠘⣿⠀⠀⠀⠀⠀<br>
+⠀⠀⠀⠀⠀⢸⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⠁⠀⠀⣾⡋⣽⠿⠛⠿⢶⣤⣤⣤⣤⣿⠀⠀⠀⠀⠀<br>
+⠀⠀⠀⠀⠀⢸⣿⡴⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢻⣄⡀⠀⢈⣻⡏⠀⠀⠀⠀⣿⣀⠀⠈⠙⣷⠀⠀⠀⠀<br>
+⠀⠀⠀⠀⠀⣰⡿⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⠛⠛⠛⠙⢷⣄⣀⣀⣼⣏⣿⠀⠀⢀⣿⠀⠀⠀⠀<br>
+⠀⠀⠀⠀⢸⡟⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠙⣿⡉⠉⠁⢀⣠⣿⡇⠀⠀⠀⠀<br>
+⠀⠀⠀⠀⣿⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠛⠗⠾⠟⠋⢹⣷⠀⠀⠀⠀<br>
+⢀⣤⣤⣤⣿⣤⣄⠀⠀⠀⠴⠚⠲⠄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⣶⡆⠀⠀⠀⠀⢀⣈⣿⣀⣀⡀⠀<br>
+⠀⠀⠀⠈⣿⣠⣾⠟⠛⢷⡄⠀⠀⠀⠀⠀⠀⠀⡤⠶⢦⡀⠀⠀⠀⠀⠹⠯⠃⠀⠀⠀⠈⠉⢩⡿⠉⠉⠉⠁<br>
+⠀⠀⣤⡶⠿⣿⣇⠀⠀⠸⣷⠀⠀⠀⠀⠀⠀⠀⠓⠶⠞⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢤⣼⣯⣀⣀⠀⠀<br>
+⠀⢰⣯⠀⠀⠈⠻⠀⠀⠀⣿⣶⣤⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣰⡿⠁⠉⠉⠁⠀<br>
+⠀⠀⠙⣷⣄⠀⠀⠀⠀⠀⢀⣀⣀⠙⢿⣆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢈⣿⡿⢷⣄⡀⠀⠀⠀<br>
+⠀⠀⠀⠈⠙⣷⠀⠀⠀⣴⠟⠉⠉⠀⠀⣿⣀⣀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⣠⣤⣾⠟⠉⠀⠀⠈⠉⠀⠀⠀<br>
+⠀⠀⠀⠀⠰⣿⠀⠀⠀⠙⢧⣤⡶⠟⢀⣿⠛⢟⡟⡯⠽⢶⡶⠾⢿⣻⣏⣹⡏⣁⡿⠀⠀⠀⠀⠀⠀⠀⠀⠀<br>
+⠀⠀⠀⠀⠀⠹⣷⣄⠀⠀⠀⠀⠀⣠⣾⠏⠀⠀⠙⠛⠛⠋⠀⠀⢀⣽⠟⠛⠖⠛⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<br>
+⠀⠀⠀⠀⠀⠀⠀⠙⠻⠷⠶⠿⠟⠋⠹⣷⣤⣀⡀⠄⣡⣀⣠⣴⡿⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<br>
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠳⣍⣉⣻⣏⣉⣡⠞⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<br>
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</p>
+
+        </div>
+
+    </div>
+
+    <script>
+        const passwordForm = document.getElementById("passwordForm");
+        const formulario = document.getElementById("formulario");
+        const cartaContainer = document.getElementById("cartaContainer");
+        const passwordInput = document.getElementById("password");
+
+        passwordForm.addEventListener("submit", function(event) {
+            event.preventDefault();
+            const password = "pipipupis";
+            const enteredPassword = passwordInput.value;
+
+            if (enteredPassword === password) {
+                formulario.style.display = "none";
+                cartaContainer.style.display = "block";
+            } else {
+                alert("Esa no es inchi sapa, tu por que crees que se llame pipipupis estupida");
+            }
+        });
+    </script>
 </body>
-</html>
+</html>	
