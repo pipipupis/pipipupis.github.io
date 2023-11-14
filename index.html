@@ -1,59 +1,43 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>	01000001 01110001 01110101 01101001 00100000 01110011 01101001 00100000 01101110 01101111 00100000 01101000 01100001 01111001 00100000 01101110 01100001 01100100 01100001 00101100 00100000 01101111 00100000 01110011 01101001 00111111
-</title>
-    <style>
-        body {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #F8E0F1;
-            font-family: 'Arial', sans-serif;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mensaje en binario</title>
+  <style>
+    body {
+      background-color: #F8E0F1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+    }
 
-        .contenedor {
-            display: flex;
-            flex-direction: column; /* Cambiado a columna */
-            align-items: center; /* Alinea al centro verticalmente */
-            width: 80%; /* Ajusta el ancho según tus preferencias */
-        }
+    #container {
+      background-color: #FBEFF8;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+    }
 
-        .cuadro {
-            flex: 1;
-            padding: 40px;
-            border: 0px solid #8C0327;
-            border-radius: 10px;
-            background-color: #FBEFF8;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            margin: 10px; /* Añade un margen entre los cuadros */
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
+    h1 {
+      color: #8C0327;
+    }
 
-        h1 {
-            color: #8C0327;
-            margin-bottom: 10px;
-        }
-
-        p {
-            color: #8C0327;
-            font-size: 18px;
-        }
-    </style>
+    p {
+      color: #8C0327;
+      font-size: 18px;
+      margin-top: 20px;
+    }
+  </style>
 </head>
 <body>
-    <div class="contenedor">
-        <div class="cuadro">
-            <h1>Traducelo</h1>
-<p>01100101 01110011 01110100 01100101 00100000 01101110 01101111 00101100 00100000 01100101 01101100 00100000 01100100 01100101 00100000 01100001 01100010 01100001 01101010 01101111</p>
-        <p>⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⡾⠛⠛⠳⢦⣄⡀⢀⣀⣀⣀⣠⣤⣤⣄⣀⣀⡀⠀⢀⣤⣶⣦⣤⣶⠛⠛⢷⡄⠀⠀⠀⠀⠀⠀<br>
+  <div id="container">
+    <h1>Traducelo</h1>
+    <p id="binaryText">01001001 01101110 01100110 01101111 01110010 01101101 01100001 01100011 01101001 01101111 01110 100 01100101 01101110 01101100 01100001 01110011 01100101 01110011 01100100 01100101 01100001 01100010 01100001 01101010 01101111</p>
+<p>⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⡾⠛⠛⠳⢦⣄⡀⢀⣀⣀⣀⣠⣤⣤⣄⣀⣀⡀⠀⢀⣤⣶⣦⣤⣶⠛⠛⢷⡄⠀⠀⠀⠀⠀⠀<br>
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⡟⠀⠀⠀⠀⠀⠈⠛⢯⣍⠁⠀⠀⠀⠀⠀⠀⠉⠉⣻⣿⡿⣯⣟⡿⣿⣦⠀⠀⠹⣆⠀⠀⠀⠀⠀<br>
 ⠀⠀⠀⠀⠀⠀⠀⠀⢀⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠻⢧⠀⠀⠀⠀⠀⠀⠀⢸⣿⣟⡿⣧⣟⣿⣻⣿⣤⣀⡀⢻⡄⠀⠀⠀⠀<br>
 ⠀⠀⠀⠀⠀⠀⠀⣴⢾⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣯⢿⣽⣿⣿⣿⣟⡿⣿⢿⣿⣿⣷⡀⠀⠀<br>
@@ -83,8 +67,7 @@
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⢻⣮⣝⣶⣭⢳⡝⣎⣷⣧⣷⢾⡏⠀⠙⠛⠋⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<br>
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠻⣍⠉⠙⠛⠙⠉⠉⠁⢀⡾⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<br>
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠛⠲⠶⠶⠖⠖⠚⠋⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</p>
-            <p>01000010 01110101 01110011 01100011 01100001 00100000 01100101 01101110 00100000 01101100 01100001 01110011 00100000 01100110 01101100 01101111 01110010 01100101 01110011 00101110 00100000 01010011 01101001 00101100 00100000 01110011 01101111 01101100 01101111 00100000 01110000 01110101 01100100 01101001 01110011 01110100 01100101 00100000 01100101 01101110 01110100 01110010 01100001 01110010 00100000 01100001 00100000 01101100 01100001 00100000 01110000 01100001 01100111 01110101 01101001 01101110 01100001 00100000 01111001 00100000 01110011 01100001 01101100 01110100 01100001 01110010 01110100 01100101 00100000 01110100 01101111 01100100 01101111</p>
-        </div>
-    </div>
+
+  </div>
 </body>
 </html>
