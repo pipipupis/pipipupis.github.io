@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>heart letter by alexx_deev</title>
+  <link rel="stylesheet" href="./style.css">
+  <style>
+    /* Agrega el estilo para el cuadro de texto adicional */
+    #additionalContent {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #ffc0cb; /* Color de fondo rosa */
+      padding: 20px;
+      z-index: 100; /* Establece un valor alto para asegurar que esté en la parte delantera */
+      border-radius: 15px; /* Esquinas redondeadas */
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Sombra */
+      text-align: center;
+    }
+
+    #additionalContentTitle {
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    #additionalContentText {
+      font-size: 16px;
+    }
+
+    #closeAdditionalContent {
+      background-color: #F23030; /* Color de fondo gris similar al botón Reset */
+      color: #fff; /* Color del texto blanco */
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 5px; /* Esquinas redondeadas */
+      margin-top: 10px;
+    }
+
+    #closeAdditionalContent:hover {
+      background-color: #AD2323; /* Cambia el color de fondo al pasar el ratón sobre el botón */
+    }
+  </style>
+</head>
+<body>
+<div class="envlope-wrapper">
+    <div id="envelope" class="close">
+        <div class="front flap"></div>
+        <div class="front pocket"></div>
+        <div class="letter">
+            <div class="words line1"></div>
+            <div class="words line2"></div>
+            <div class="words line3"></div>
+            <div class="words line4"></div>
+        </div>
+        <div class="hearts">
+            <div class="heart a1"></div>
+            <div class="heart a2"></div>
+            <div class="heart a3"></div>
+        </div>
+    </div>
+</div>
+<div class="reset">
+    <button id="open">Open</button>
+    <button id="reset">Reset</button>
+</div>
+
+<!-- Agrega el cuadro de texto adicional -->
+<div id="additionalContent">
+  <div id="additionalContentTitle" style="font-family:montserrat">3° "A" Les desea un feliz 14 de Febrero
+</div>
+  <div id="additionalContentText"style="font-family:montserrat">En el rincón más íntimo de mi corazón, florece un jardín de emociones que solo tú has cultivado. Cada palabra tuya es como una suave brisa que acaricia mi alma, y en cada momento compartido, construimos un lienzo de recuerdos que pinto con los colores más vibrantes. Tus risas son destellos de luz que iluminan mis días, y tus abrazos, anclas que sostienen mi ser. Cada página de nuestra historia es un capítulo de amor, y aquí, con sinceridad tinta en cada palabra, quiero que sepas que eres la razón de mi gratitud eterna. En este universo de sentimientos, eres la melodía que da ritmo a mi existencia, y cada día a tu lado es un poema que agradezco escribir.
+  </div>
+  <button id="closeAdditionalContent">Cerrar</button>
+</div>
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+<script  src="./script.js"></script>
+<script>
+  $(document).ready(function() {
+    $("#open").click(function() {
+      // Muestra el cuadro de texto adicional
+      $("#additionalContent").css("display", "block");
+    });
+
+    $("#closeAdditionalContent").click(function() {
+      // Cierra el cuadro de texto adicional
+      $("#additionalContent").css("display", "none");
+    });
+  });
+</script>
+
+</body>
+</html>
